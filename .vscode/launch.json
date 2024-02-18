@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ArrayOps",
+            "request": "launch",
+            "mainClass": "ArrayOps",
+            "projectName": "hw04-reserves-EdanZiv99_20541263"
+        },
+        "args"
+    ]
+}
