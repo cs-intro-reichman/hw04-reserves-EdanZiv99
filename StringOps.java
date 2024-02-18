@@ -22,18 +22,13 @@ public class StringOps {
     //////                                               ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        String string1 = "Hello World";
+        String string1 = "Hello WorLd";
         String string2 = "One two tHRee world";
         String string3 = "vowels are fun";
         String string4 = "intro";
         String string5 = "yellow";
         String string6 = "eEAaUuOoIi";
-        System.out.println(camelCase(string1));
-        System.out.println(camelCase(string2));
-        System.out.println(camelCase(string3));
-        System.out.println(camelCase(string4));
-        System.out.println(camelCase(string5));
-        System.out.println(camelCase(string6));
+        printArray(allIndexOf(string1, 'l')); 
 
     }
 
@@ -91,8 +86,24 @@ public class StringOps {
     }
 
     public static int[] allIndexOf (String string, char chr) {
-        // Write your code here:
-        return new int[1];
+        int counter = 0;
+    
+        for (int i = 0; i < string.length(); i++) {
+            if (chr == string.charAt(i)) {
+                counter++; 
+            } 
+        }
+
+        int [] output = new int[counter];
+        int n = 0;
+
+        for (int i = 0; i < string.length(); i++) {
+            if (chr == string.charAt(i)) {
+                output[n] = i; 
+                n++; 
+            }
+        }
+        return output;
     }
 
 
@@ -108,5 +119,15 @@ public class StringOps {
         ch = (char) (ch + 32);
         }
         return ch; 
+    }
+
+    public static void printArray(int[] array){
+        System.out.print('{');
+        for (int i = 0; i < array.length; i++){
+            System.out.print(array[i]);
+            char c = i != array.length - 1 ? ',' : '}';
+            System.out.print(c);
+         }
+        System.out.println();
     }
 }
