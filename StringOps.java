@@ -28,12 +28,12 @@ public class StringOps {
         String string4 = "intro";
         String string5 = "yellow";
         String string6 = "eEAaUuOoIi";
-        System.out.println(capVowelsLowRest(string1));
-        System.out.println(capVowelsLowRest(string2));
-        System.out.println(capVowelsLowRest(string3));
-        System.out.println(capVowelsLowRest(string4));
-        System.out.println(capVowelsLowRest(string5));
-        System.out.println(capVowelsLowRest(string6));
+        System.out.println(camelCase(string1));
+        System.out.println(camelCase(string2));
+        System.out.println(camelCase(string3));
+        System.out.println(camelCase(string4));
+        System.out.println(camelCase(string5));
+        System.out.println(camelCase(string6));
 
     }
 
@@ -66,12 +66,47 @@ public class StringOps {
     }
 
     public static String camelCase (String string) {
-        // Write your code here:
-        return "";
+        String ans = "";
+        boolean isSpace = false; 
+        int i = 0; 
+
+        for (i = 0; i < string.length(); i++) {
+            if (string.charAt(i) != ' ') {
+                break;
+            }
+        }
+        for ( ; i < string.length(); i++) {
+            if (string.charAt(i) == ' ') {
+                isSpace = true;
+            } else {
+                if (isSpace) {
+                    isSpace = false;
+                    ans += toUpper(string.charAt(i));  
+                } else {
+                    ans += toLower(string.charAt(i));  
+                }
+            }
+        }
+        return ans;     
     }
 
     public static int[] allIndexOf (String string, char chr) {
         // Write your code here:
         return new int[1];
+    }
+
+
+    public static char toUpper (char ch){
+        if (ch >= 'a' && ch <= 'z') {
+            ch = (char) (ch - 32);
+        } 
+        return ch; 
+    } 
+
+    public static char toLower (char ch){
+        if (ch >= 'A' && ch <= 'Z') {
+        ch = (char) (ch + 32);
+        }
+        return ch; 
     }
 }
