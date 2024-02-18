@@ -7,7 +7,7 @@ public class ArrayOps {
         int [] array3 = {1};
         int [] array4 = {4, 4};
         System.out.println(isSorted(array3));
-        System.out.println(isSorted(array4));
+        System.out.println(isSorted(array4)); 
     }
 
 
