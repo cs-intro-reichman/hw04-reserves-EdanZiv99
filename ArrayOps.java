@@ -4,8 +4,10 @@ public class ArrayOps {
     public static void main(String[] args) {
         int [] array1 = {3, 2, 1}; 
         int [] array2 = {3, 3, 3, 2, 1, 2}; 
-        //printArray(set(array2));
-        System.out.println(containsTheSameElements(array1, array2));
+        int [] array3 = {1};
+        int [] array4 = {4, 4};
+        System.out.println(isSorted(array3));
+        System.out.println(isSorted(array4));
     }
 
 
@@ -73,8 +75,22 @@ public class ArrayOps {
     }
 
     public static boolean isSorted(int [] array) {
-        // Write your code here:
-        return false;
+        if (array[0] > array[array.length - 1]) {
+            for (int i = 0; i < array.length - 1; i++) {
+                if (array[i+1] > array[i]) {
+                    return false;
+                }
+            }
+        } else { 
+            if (array[0] > array[array.length - 1]) {
+                for (int i = 0; i < array.length - 1; i++) {
+                    if (array[i+1] > array[i]) {
+                        return false; 
+                    }
+                }
+            }
+        }
+        return true;
     }
 
     public static boolean contains(int[] arr, int value) {
