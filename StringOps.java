@@ -22,12 +22,47 @@ public class StringOps {
     //////                                               ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        
+        String string1 = "Hello World";
+        String string2 = "One two tHRee world";
+        String string3 = "vowels are fun";
+        String string4 = "intro";
+        String string5 = "yellow";
+        String string6 = "eEAaUuOoIi";
+        System.out.println(capVowelsLowRest(string1));
+        System.out.println(capVowelsLowRest(string2));
+        System.out.println(capVowelsLowRest(string3));
+        System.out.println(capVowelsLowRest(string4));
+        System.out.println(capVowelsLowRest(string5));
+        System.out.println(capVowelsLowRest(string6));
+
     }
 
     public static String capVowelsLowRest (String string) {
-        // Write your code here:
-        return "";
+        String vowels = "aAeEiIoOuU"; 
+        String ans = "";
+        
+        for (int i =0; i < string.length(); i++) {
+            if (!(string.charAt(i) == ' ')) {
+                if ((vowels.indexOf(string.charAt(i)) != -1)) {
+                    if (string.charAt(i) >= 'a' && string.charAt(i) <= 'z') {
+                        ans = ans + (char) ((string.charAt(i)) - 32); 
+                    } else {
+                        ans = ans + string.charAt(i);
+                    }
+                } else {
+                    if (string.charAt(i) >= 'A' && string.charAt(i) <= 'Z') {
+                        ans = ans + (char) ((string.charAt(i)) + 32) ; 
+                    } else {
+                        ans = ans + string.charAt(i); 
+                    }
+                    
+                }
+                
+            } else {
+                ans = ans + " "; 
+            }
+        }
+        return ans;
     }
 
     public static String camelCase (String string) {

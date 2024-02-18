@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "StringOps",
+            "request": "launch",
+            "mainClass": "StringOps",
+            "projectName": "hw04-reserves-EdanZiv99_20541263"
+        },
+        {
+            "type": "java",
             "name": "ArrayOps",
             "request": "launch",
             "mainClass": "ArrayOps",
