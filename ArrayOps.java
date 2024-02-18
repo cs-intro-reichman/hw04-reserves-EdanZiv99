@@ -2,12 +2,14 @@ import javax.sql.rowset.spi.SyncResolver;
 
 public class ArrayOps {
     public static void main(String[] args) {
-        int [] array1 = {3, 2, 1}; 
-        int [] array2 = {3, 3, 3, 2, 1, 2}; 
-        int [] array3 = {1,2,3};
+        int [] array1 = {1,2,3}; 
+        int [] array2 = {3,2,1}; 
+        int [] array3 = {1,-2,3,4};
         int [] array4 = {4, 4};
+        System.out.println(isSorted(array1));
+        System.out.println(isSorted(array2)); 
         System.out.println(isSorted(array3));
-        System.out.println(isSorted(array4)); 
+        System.out.println(isSorted(array4));
     }
 
 
